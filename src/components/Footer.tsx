@@ -13,12 +13,18 @@ const Footer = () => {
           </p>
         </div>
         <div className="social-links d-flex justify-content-center">
-          <a target="_blank" href={config.social.youtube} className="youtube">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={config.social.youtube}
+            className="youtube"
+          >
             <i className="bi bi-youtube"></i>
           </a>
 
           <a
             target="_blank"
+            rel="noreferrer"
             href={config.social.instagram}
             className="instagram"
           >

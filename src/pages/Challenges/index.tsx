@@ -1,8 +1,6 @@
 import * as React from "react";
 import { Breadcrumbs } from "../../components";
 import { challenges } from "../../constants/challenges";
-import { Link } from "react-router-dom";
-import { numberToWord } from "../../utilities/number-to-word";
 
 const Challenges = () => {
   React.useEffect(() => {

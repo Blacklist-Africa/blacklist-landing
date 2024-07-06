@@ -46,7 +46,7 @@ const Single = () => {
 
       swiper.current.insertAdjacentElement("afterbegin", swiperConfig);
     }
-  }, [swiper.current]);
+  }, []);
 
   return (
     <main className="main">

@@ -20,6 +20,7 @@ const Hero = () => {
               Management Sector
             </p>
             <a
+              rel="noreferrer"
               href="https://www.youtube.com/watch?v=34-2hZPpn0I&t=40s"
               target="_blank"
               className="btn-get-started"

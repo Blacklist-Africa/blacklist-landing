@@ -12,15 +12,23 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
     isRemoved: false,
   });
 
+  const [scrollY, setScrollY] = React.useState(0);
+
   const handlePageLoad = () => {
     setLoader({ isRemoved: false, isLoaded: true });
   };
 
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
   React.useEffect(() => {
     window.addEventListener("load", handlePageLoad);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("load", handlePageLoad);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -35,13 +43,14 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
       <Header />
       {children}
       <Footer />
-      <a
-        href="#"
+      <span
         id="scroll-top"
-        className="scroll-top d-flex align-items-center justify-content-center"
+        className={`scroll-top d-flex align-items-center justify-content-center${
+          scrollY > 100 ? " active" : ""
+        }`}
       >
         <i className="bi bi-arrow-up-short"></i>
-      </a>
+      </span>
 
       {!loader.isRemoved && (
         <div id="preloader" className={loader.isLoaded ? "loaded" : ""}>

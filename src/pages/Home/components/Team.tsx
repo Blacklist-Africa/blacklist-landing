@@ -76,7 +76,7 @@ const Team = () => {
 
       swiper.current.insertAdjacentElement("afterbegin", swiperConfig);
     }
-  }, [swiper.current]);
+  }, []);
 
   return (
     <section id="team" className="testimonials section">
