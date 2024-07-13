@@ -45,6 +45,12 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
       <Footer />
       <span
         id="scroll-top"
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}
         className={`scroll-top d-flex align-items-center justify-content-center${
           scrollY > 100 ? " active" : ""
         }`}

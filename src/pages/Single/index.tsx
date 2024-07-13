@@ -65,6 +65,15 @@ const Single = () => {
                   voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi
                   ratione sint. Sit quaerat ipsum dolorem.
                 </p>
+                {challenge?.videoId && (
+                  <a
+                    href={`https://www.youtube.com/watch?v=${challenge?.videoId}`}
+                    className="cta-btn"
+                  >
+                    Watch Video
+                    <br />
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -77,68 +86,18 @@ const Single = () => {
 
       <section id="gallery-details" className="gallery-details section">
         <div className="container" data-aos="fade-up">
-          <div
-            className="portfolio-details-slider swiper init-swiper"
-            ref={swiper}
-          >
-            <div className="swiper-wrapper align-items-center">
-              <div className="swiper-slide">
-                <img src={challenge?.image} alt="" />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-8.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-9.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-10.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-11.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-12.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-13.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-14.jpg`}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
-            <div className="swiper-pagination"></div>
-          </div>
+          {challenge?.videoId && (
+            <iframe
+              title={challenge?.title || "Challenge Title"}
+              style={{
+                width: "80vw",
+                height: "80vh",
+              }}
+              src={`https://www.youtube.com/embed/${challenge?.videoId}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          )}
 
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up">
@@ -200,6 +159,69 @@ const Single = () => {
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div
+            className="portfolio-details-slider swiper init-swiper"
+            ref={swiper}
+          >
+            <div className="swiper-wrapper align-items-center">
+              <div className="swiper-slide">
+                <img src={challenge?.image} alt="" />
+              </div>
+
+              <div className="swiper-slide">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-8.jpg`}
+                  alt=""
+                />
+              </div>
+
+              <div className="swiper-slide">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-9.jpg`}
+                  alt=""
+                />
+              </div>
+
+              <div className="swiper-slide">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-10.jpg`}
+                  alt=""
+                />
+              </div>
+
+              <div className="swiper-slide">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-11.jpg`}
+                  alt=""
+                />
+              </div>
+
+              <div className="swiper-slide">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-12.jpg`}
+                  alt=""
+                />
+              </div>
+
+              <div className="swiper-slide">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-13.jpg`}
+                  alt=""
+                />
+              </div>
+
+              <div className="swiper-slide">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-14.jpg`}
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
+            <div className="swiper-pagination"></div>
           </div>
         </div>
       </section>

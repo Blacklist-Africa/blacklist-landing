@@ -1,41 +1,50 @@
 import * as React from "react";
-import { michael, tedla } from "../../../assets/team";
+import {
+  aziza,
+  brian,
+  isaiah,
+  ivan,
+  john,
+  michael,
+  tedla,
+} from "../../../assets/team";
 
 const members = [
   {
     name: "Michael Nwuju",
-    description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
+    description: "Team Lead, Prolific Software Engineer, Head of Engineering.",
     photo: michael,
   },
   {
     name: "Tedla Tesfaye",
-    description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
+    description: "Passionate Software Developer, Social Justice Advocate.",
     photo: tedla,
   },
   {
     name: "Brian Gatanazi",
-    description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
-    photo: michael,
+    description:
+      "Young Tech entrepreneur, Part-Time Sound Engineer, Software Engineering Enthusiast",
+    photo: brian,
   },
   {
     name: "Aziza Solace",
-    description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
-    photo: tedla,
+    description: "African Leadership University Student, Technology Enthusiast",
+    photo: aziza,
   },
   {
     name: "Isaiah Dembe",
     description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
-    photo: tedla,
+    photo: isaiah,
   },
   {
     name: "Ivan Manzi",
     description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
-    photo: tedla,
+    photo: ivan,
   },
   {
     name: "John Pangara",
     description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
-    photo: michael,
+    photo: john,
   },
 ];
 

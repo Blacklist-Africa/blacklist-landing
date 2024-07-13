@@ -21,7 +21,7 @@ const Hero = () => {
             </p>
             <a
               rel="noreferrer"
-              href="https://www.youtube.com/watch?v=34-2hZPpn0I&t=40s"
+              href="https://www.youtube.com/watch?v=34-2hZPpn0I"
               target="_blank"
               className="btn-get-started"
             >
