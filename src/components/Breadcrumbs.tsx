@@ -11,13 +11,17 @@ export interface BreadcrumbsProps {
   child?: Partial<BreadcrumbsElement>;
 }
 
+const isMobile = window.innerWidth <= 768;
+
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ parent, child }) => {
   return (
     <nav className="breadcrumbs">
       <div className="container">
         <ol>
           <li>
-            <a href="/">Home</a>
+            <a href="/">
+              {isMobile ? <i className="bi bi-house"></i> : "Home"}
+            </a>
           </li>
           <li className={!child ? "current" : ""}>
             {!child ? parent.title : <a href={parent.link}>{parent.title}</a>}

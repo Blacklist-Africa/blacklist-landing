@@ -1481,3 +1481,9 @@ section,
 .info-item {
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  iframe {
+    height: 40vh !important;
+  }
+}

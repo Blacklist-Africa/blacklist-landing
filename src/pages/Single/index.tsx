@@ -67,6 +67,8 @@ const Single = () => {
                 </p>
                 {challenge?.videoId && (
                   <a
+                    rel="noreferrer"
+                    target="_blank"
                     href={`https://www.youtube.com/watch?v=${challenge?.videoId}`}
                     className="cta-btn"
                   >
@@ -90,7 +92,7 @@ const Single = () => {
             <iframe
               title={challenge?.title || "Challenge Title"}
               style={{
-                width: "80vw",
+                width: "100%",
                 height: "80vh",
               }}
               src={`https://www.youtube.com/embed/${challenge?.videoId}`}
