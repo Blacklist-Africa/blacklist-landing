@@ -1482,8 +1482,24 @@ section,
   cursor: pointer;
 }
 
+.hero {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/slideshow/ch4-5.jpeg");
+}
+
+.hero p {
+  text-shadow: 32px 8px 5px rgba(0, 0, 0, 0.7);
+}
+
 @media (max-width: 500px) {
   iframe {
     height: 40vh !important;
+  }
+
+  .hero {
+    min-height: 40vh;
   }
 }

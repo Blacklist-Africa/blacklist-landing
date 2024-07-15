@@ -60,10 +60,11 @@ const Single = () => {
               <div className="col-lg-8">
                 <h1>{challenge?.title}</h1>
                 <p className="mb-0">
-                  Odio et unde deleniti. Deserunt numquam exercitationem.
+                  {challenge?.bio ||
+                    `Odio et unde deleniti. Deserunt numquam exercitationem.
                   Officiis quo odio sint voluptas consequatur ut a odio
                   voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi
-                  ratione sint. Sit quaerat ipsum dolorem.
+                  ratione sint. Sit quaerat ipsum dolorem.`}
                 </p>
                 {challenge?.videoId && (
                   <a
@@ -104,36 +105,43 @@ const Single = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up">
               <div className="portfolio-description">
-                <h2>This is an example of portfolio details</h2>
-                <p>
-                  Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
-                  itaque inventore commodi labore quia quia. Exercitationem
-                  repudiandae officiis neque suscipit non officia eaque itaque
-                  enim. Voluptatem officia accusantium nesciunt est omnis
-                  tempora consectetur dignissimos. Sequi nulla at esse enim cum
-                  deserunt eius.
-                </p>
-                <p>
-                  Amet consequatur qui dolore veniam voluptatem voluptatem sit.
-                  Non aspernatur atque natus ut cum nam et. Praesentium error
-                  dolores rerum minus sequi quia veritatis eum. Eos et doloribus
-                  doloremque nesciunt molestiae laboriosam.
-                </p>
+                <h2>{challenge?.title}</h2>
+                {(challenge?.paragraphs || []).map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+                {(!challenge?.paragraphs || !challenge?.paragraphs?.length) && (
+                  <>
+                    <p>
+                      Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
+                      itaque inventore commodi labore quia quia. Exercitationem
+                      repudiandae officiis neque suscipit non officia eaque
+                      itaque enim. Voluptatem officia accusantium nesciunt est
+                      omnis tempora consectetur dignissimos. Sequi nulla at esse
+                      enim cum deserunt eius.
+                    </p>
+                    <p>
+                      Amet consequatur qui dolore veniam voluptatem voluptatem
+                      sit. Non aspernatur atque natus ut cum nam et. Praesentium
+                      error dolores rerum minus sequi quia veritatis eum. Eos et
+                      doloribus doloremque nesciunt molestiae laboriosam.
+                    </p>
 
-                <p>
-                  Impedit ipsum quae et aliquid doloribus et voluptatem quasi.
-                  Perspiciatis occaecati earum et magnam animi. Quibusdam non
-                  qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque
-                  minus deserunt assumenda tempore. Delectus voluptas
-                  necessitatibus est.
-                </p>
+                    <p>
+                      Impedit ipsum quae et aliquid doloribus et voluptatem
+                      quasi. Perspiciatis occaecati earum et magnam animi.
+                      Quibusdam non qui ea vitae suscipit vitae sunt.
+                      Repudiandae incidunt cumque minus deserunt assumenda
+                      tempore. Delectus voluptas necessitatibus est.
+                    </p>
 
-                <p>
-                  Sunt voluptatum sapiente facilis quo odio aut ipsum repellat
-                  debitis. Molestiae et autem libero. Explicabo et quod
-                  necessitatibus similique quis dolor eum. Numquam eaque
-                  praesentium rem et qui nesciunt.
-                </p>
+                    <p>
+                      Sunt voluptatum sapiente facilis quo odio aut ipsum
+                      repellat debitis. Molestiae et autem libero. Explicabo et
+                      quod necessitatibus similique quis dolor eum. Numquam
+                      eaque praesentium rem et qui nesciunt.
+                    </p>
+                  </>
+                )}
               </div>
             </div>
 
@@ -161,69 +169,6 @@ const Single = () => {
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div
-            className="portfolio-details-slider swiper init-swiper"
-            ref={swiper}
-          >
-            <div className="swiper-wrapper align-items-center">
-              <div className="swiper-slide">
-                <img src={challenge?.image} alt="" />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-8.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-9.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-10.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-11.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-12.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-13.jpg`}
-                  alt=""
-                />
-              </div>
-
-              <div className="swiper-slide">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/img/gallery/gallery-14.jpg`}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
-            <div className="swiper-pagination"></div>
           </div>
         </div>
       </section>

@@ -23,27 +23,31 @@ const members = [
   {
     name: "Brian Gatanazi",
     description:
-      "Young Tech entrepreneur, Part-Time Sound Engineer, Software Engineering Enthusiast",
+      "Young Tech entrepreneur, Part-Time Sound Engineer, Software Engineering Enthusiast.",
     photo: brian,
   },
   {
     name: "Aziza Solace",
-    description: "African Leadership University Student, Technology Enthusiast",
+    description:
+      "African Leadership University Student, Technology Enthusiast.",
     photo: aziza,
   },
   {
     name: "Isaiah Dembe",
-    description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
+    description:
+      "African Leadership University Student, Growth Advocate, Youth Mentor.",
     photo: isaiah,
   },
   {
     name: "Ivan Manzi",
-    description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
+    description:
+      "African Leadership University Student, Incoming Software Engineer.",
     photo: ivan,
   },
   {
     name: "John Pangara",
-    description: "Team Lead, Software Engineer. Ex-Head of Engineering.",
+    description:
+      "Enduring Artist, Agricultural Innovator, Culinary Enthusiast.",
     photo: john,
   },
 ];
@@ -108,7 +112,9 @@ const Team = () => {
                       alt={member.name}
                     />
                     <h3>{member.name}</h3>
-                    {member.name.includes("Michael") ? "Team Lead" : "Member"}
+                    {member.name.includes("Michael")
+                      ? "Team Lead"
+                      : "Team Member"}
                   </div>
                 </div>
               </div>

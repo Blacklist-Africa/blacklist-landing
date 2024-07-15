@@ -1,4 +1,21 @@
 import React from "react";
+import SlideShow from "./SlideShow";
+
+import ch45 from "../../../assets/slideshow/ch4-5.jpeg";
+import ch42 from "../../../assets/slideshow/ch4-2.jpeg";
+import ch43 from "../../../assets/slideshow/ch4-3.jpeg";
+import ch44 from "../../../assets/slideshow/ch4-4.jpeg";
+import ch46 from "../../../assets/slideshow/ch4-6.jpeg";
+
+import ch47 from "../../../assets/slideshow-2/ch4-7.jpg";
+import ch48 from "../../../assets/slideshow-2/ch4-8.jpg";
+import ch49 from "../../../assets/slideshow-2/ch4-9.jpg";
+import ch410 from "../../../assets/slideshow-2/ch4-10.jpg";
+import ch41 from "../../../assets/slideshow-2/ch4-1.jpg";
+
+const images1 = [ch45, ch42, ch43, ch44, ch46];
+
+const images2 = [ch47, ch48, ch49, ch410, ch41];
 
 const Mission = () => {
   return (
@@ -26,10 +43,11 @@ const Mission = () => {
           </div>
         </div>
       </section>
+      <SlideShow images={images1} />
       <section id="problem" className="section">
         <div className="container section-title" data-aos="fade-up">
           <h2>Problem</h2>
-          <p>Our blocker</p>
+          <p>Problem Statement</p>
         </div>
         <div
           className="container container-fluid"
@@ -77,6 +95,7 @@ const Mission = () => {
           </div>
         </div>
       </section>
+      <SlideShow images={images2} />
     </>
   );
 };
