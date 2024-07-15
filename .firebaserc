@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "blacklist-landing"
-  }
+    "default": "blacklist-landing",
+    "production": "blacklist-landing-live"
+  },
+  "targets": {},
+  "etags": {}
 }
